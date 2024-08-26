@@ -1,0 +1,66 @@
+$navbar-default-bg: #073B15;
+$white-color: #fff;
+$primary-color: #073B15;
+$spacing: 20px;
+
+@import "bootstrap";
+
+.navbar {
+  background-color: $navbar-default-bg;
+  
+  .navbar-nav .nav-link,
+  .navbar-nav .dropdown-toggle {
+    color: $white-color !important;
+  }
+
+  .d-flex {
+    margin-left: auto;
+  }
+
+  .form-control {
+    margin-right: 10px;
+  }
+}
+
+.center {
+  margin-top: $spacing;
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: asset-url('anime-kitchen.jpg');
+  background-size: cover;
+  height: 300px;
+
+  h1, h2 {
+    color: $white-color;
+    text-align: center;
+    letter-spacing: -1px;
+  }
+
+  p {
+    margin-top: $spacing;
+  }
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: $white-color;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+
+  &:hover {
+    color: $white-color;
+    text-decoration: none;
+  }
+}
+
+.btn {
+  background-color: $primary-color;
+}
+
+.row h2 {
+  color: $primary-color;
+}

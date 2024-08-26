@@ -10,6 +10,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/navigation'%>
+    <div class="container center">
+      <%= yield %>
+    </div>
   </body>
 </html>
