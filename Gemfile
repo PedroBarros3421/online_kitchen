@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
 gem 'awesome_print'
+gem 'tty-spinner'
 
 
 

@@ -1,5 +1,8 @@
 class Recipe < ApplicationRecord
+
   validates :name, presence: true, length: {maximum: 30}
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates :description, presence: true, length: {maximum: 255}, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
+  validates :description, presence: true, length: {maximum: 255}
+
+  belongs_to :chef
+  validates :chef_id, presence: true
 end

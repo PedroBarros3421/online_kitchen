@@ -13,17 +13,19 @@
 ActiveRecord::Schema.define(version: 2024_08_26_180553) do
 
   create_table "chefs", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
+    t.string "name", null: false
+    t.string "email", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "recipes", force: :cascade do |t|
     t.string "name", null: false
-    t.text "description"
+    t.text "description", null: false
+    t.integer "chef_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["chef_id"], name: "index_recipes_on_chef_id"
   end
 
 end

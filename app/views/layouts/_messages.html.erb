@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center mt-5">
+  <div class="col-md-8">
+    <% flash.each do |name, msg| %>
+      <div class="alert alert-<%= name %>">
+        <a href="#" class="close" data-dismiss="alert">×</a>
+        <%= msg %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+      var flashMessages = document.querySelectorAll('.flash-message');
+      flashMessages.forEach(function(message) {
+        message.style.display = 'none';
+      });
+    }, 10000);
+  });
+</script>

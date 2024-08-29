@@ -64,3 +64,100 @@ $spacing: 20px;
 .row h2 {
   color: $primary-color;
 }
+
+.well {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #EAEAEA;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+.created{
+  margin: 50px;
+  align-items: center;
+}
+
+.description {
+  margin-top: $spacing;
+
+}
+
+.recipe-title {
+  text-align: center;
+  margin-bottom: $spacing;
+}
+
+.chef_info {
+  margin-top: -10px;
+}
+
+.recipe-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #EAEAEA;
+  margin-left: 20px;
+  flex-grow: 1;
+}
+
+.form-horizontal .form-group {
+  margin-bottom: 15px;
+  text-align: left;
+  margin-left: 270px;
+}
+
+.form-horizontal .control-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-horizontal .form-control {
+  width: 100%;
+}
+
+.form-horizontal .btn {
+  display: block;
+  margin: 20px auto 0;
+  margin-left: 200px;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.alert {
+  width: 100%;
+  text-align: center;
+}
+
+.recipe-actions {
+  padding-top: 5px;
+  a {
+    color: #fff;
+  }
+}
+
+.btn-warning {
+  background-color: #f0ad4e !important;
+  border-color: #eea236 !important;
+  color: #fff !important;
+}
+
+.btn-danger {
+  background-color: #d9534f !important;
+  border-color: #d43f3a !important;
+  color: #fff !important;
+}
+
+.custom-primary-btn {
+  background-color: #5bc0de !important; /* Azul claro */
+  border-color: #46b8da !important;
+  color: #fff !important;
+}
