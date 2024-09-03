@@ -1,5 +1,7 @@
 class Recipe < ApplicationRecord
 
+  paginates_per 5
+
   validates :name, presence: true, length: {maximum: 30}
   validates :description, presence: true, length: {maximum: 255}
 
