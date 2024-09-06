@@ -1,0 +1,26 @@
+<%= render 'shared/page_title', title: "Available Ingredients"%>
+
+<div class="row d-flex justify-content-center align-items-center mt-4">
+  <% @ingredients.each do |ingredient| %>
+    <div class="col-md-4 mb-4">
+      <div class="well">
+        <h5 class="chef-title">
+          <%= link_to ingredient.name.capitalize, ingredient_path(ingredient), style: "color: #073B15;"  %>
+        </h5>
+        <small class="d-block mb-2">
+          <%= pluralize(ingredient.recipes.count, "recipe") if ingredient.recipes %>
+        </small>
+        <% if logged_in? && current_chef.admin?%>
+          <small class="d-block text-danger">
+            <%= link_to "Edit this ingredients", edit_ingredient_path(ingredient) %>
+          </small>
+        <% end %>
+
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="d-flex justify-content-center">
+  <%= paginate @ingredients%>
+</div>

@@ -8,10 +8,20 @@
         <h5 class="chef-title">
           <%= link_to chef.name.capitalize, chef_path(chef), style: "color: #073B15;"  %>
         </h5>
-        <small>
+        <small class="d-block mb-2">
           <%= pluralize(chef.recipes.count, "recipe") if chef.recipes %>
         </small>
+        <% if logged_in? && current_chef.admin? && !chef.admin? %>
+          <small class="d-block text-danger">
+            <%= link_to "Delete", chef_path(chef), method: :delete, data: { confirm: "Are you sure you want to delete this chef and all associated recipes?" } %>
+          </small>
+        <% end %>
+
       </div>
     </div>
   <% end %>
+</div>
+
+<div class="d-flex justify-content-center">
+  <%= paginate @chefs%>
 </div>

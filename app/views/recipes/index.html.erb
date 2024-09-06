@@ -1,12 +1,12 @@
 <%= render 'shared/page_title', title: "showing all recipes"%>
 
-<div align="center">
+<div class="d-flex justify-content-center">
   <%= paginate @recipes%>
 </div>
 
 <%= render partial: 'recipe', locals: { obj: @recipes } %>
 
 
-<div align="center">
+<div class="d-flex justify-content-center">
   <%= paginate @recipes%>
 </div>
