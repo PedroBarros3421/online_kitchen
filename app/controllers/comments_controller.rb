@@ -9,8 +9,7 @@ class CommentsController < ApplicationController
     @comment.chef = current_chef
 
     if @comment.save
-      flash[:success] = "Comment was created successfully!"
-      redirect_to recipe_path(@recipe)
+      ActionCable.server.broadcast "comments", render(partial: 'comments/comment', object: @comment)
     else
       flash[:danger] = "Comment was not created"
       redirect_back(fallback_location: recipe_path(@recipe))

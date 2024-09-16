@@ -161,3 +161,81 @@ $spacing: 20px;
   border-color: #46b8da !important;
   color: #fff !important;
 }
+
+.chat-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Mensagens */
+.messages {
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 10px;
+  height: 400px; /* Ajuste conforme necessário */
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Mensagem individual */
+.message {
+  position: relative; /* Para posicionar o timestamp */
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eaeaea;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.message p {
+  margin: 0;
+}
+
+.message .content {
+  margin-left: 10px;
+  line-height: 1.4;
+}
+
+.message img {
+  border-radius: 50%;
+}
+
+.message small {
+  color: #888;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 0.8em; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+/* Formulário de mensagem */
+.message-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.message-container .form-control {
+  flex: 1;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+
+.message-container .btn {
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+/* Ajustar alinhamento do botão */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}

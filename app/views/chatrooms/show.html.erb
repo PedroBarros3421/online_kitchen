@@ -1,0 +1,16 @@
+<%= render 'shared/page_title', title: "Chef Chat" %>
+
+<div class="chat-wrapper" style="display: flex; justify-content: center; align-items: center; height: 100vh; padding: 20px;">
+  <div class="chat-container" style="width: 100%; max-width: 800px; margin-top: -150px; margin-bottom: 20px;">
+    <div class="messages" id="messages" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 10px; height: 400px; overflow-y: auto; background-color: #f9f9f9; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+      <%= render @messages %>
+    </div>
+    <hr/>
+    <div class="message-container" style="display: flex; align-items: center; margin-top: 10px;">
+      <%= form_for(@message, remote: true, html: { class: "form-horizontal", role: "form", style: "display: flex; align-items: center; width: 100%; max-width: 800px;" }) do |f| %>
+        <%= f.text_area :content, class: "form-control", placeholder: "Say something!", style: "flex: 1; margin-right: 10px; border-radius: 20px;" %>
+        <%= f.submit "Send", class: 'btn btn-primary', style: 'border-radius: 20px; padding: 10px 20px;' %>
+      <% end %>
+    </div>
+  </div>
+</div>
