@@ -5,6 +5,7 @@ namespace :dev do
       show_spinner("Dropping DB...") {%x(rails db:drop)}
       show_spinner("Creating DB...") {%x(rails db:create)}
       show_spinner("Migrating DB...") {%x(rails db:migrate)}
+      show_spinner("Seed DB...") {%x(rails db:seed)}
     else
       puts "You aren't in the development environment!"
     end
